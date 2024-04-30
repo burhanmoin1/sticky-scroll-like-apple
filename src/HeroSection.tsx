@@ -12,14 +12,14 @@ const HeroSection = () => {
     })
 
     useMotionValueEvent(scrollY, "change", (latest) => {
-        if (latest >= 534) {
+        if (latest >= 318) {
             setIsSticky(true);
         } else {
             setIsSticky(false);
         }
     });
 
-    const opacity = useTransform(scrollY, [200, 600], [0, 1]);
+    const scale = useTransform(scrollY, [0, 280], [1, 1.2]);
 
     return (
         <div className="HeroSection">
@@ -28,9 +28,7 @@ const HeroSection = () => {
                 src={coffeebeans}
                 alt="Coffee Beans"
                 style={{
-                    width: '30%',  // Adjust width as needed
-                    height: '40%',
-                    opacity,
+                    scale,
                 }}
             />
         </div>

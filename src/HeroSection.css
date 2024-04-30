@@ -1,0 +1,18 @@
+.HeroSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 200vh;
+}
+
+.coffeebeansimg {
+    position: absolute;
+    transition: position 0.3s;
+    top: 10;
+}
+
+.coffeebeansimg.sticky {
+    position: fixed;
+    transform: translateY(-150%);
+}
